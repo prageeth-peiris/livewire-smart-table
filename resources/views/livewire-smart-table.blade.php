@@ -84,7 +84,7 @@
                                     </td>
                                 @else
                                     <td class="border-dashed border-t border-gray-200 {{ $props['class'] ?? '' }}">
-                                        <span class="text-gray-700 px-6 py-3 flex items-center">{!! $item->[$column] !!}</span>
+                                        <span class="text-gray-700 px-6 py-3 flex items-center">{!! $item[$column] !!}</span>
                                     </td>
                                 @endif
                             @endforeach
