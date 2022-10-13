@@ -73,18 +73,18 @@
                                 @if ($props['type'] === 'link')
                                     <td class="border-dashed border-t border-gray-200 {{ $props['class'] ?? '' }}">
                                         <a href="{{ $item->{$column.'_url'} }}" target="{{ $props['target'] ?? '_blank' }}">
-                                            {!! $item->{$column} !!}
+                                            {!! $item[$column] !!}
                                         </a>
                                     </td>
                                 @elseif ($props['type'] === 'actions')
                                     <td class="border-dashed border-t border-gray-200 {{ $props['class'] ?? '' }}">
-                                        @foreach ($item->{$column} as $option)
+                                        @foreach ($item[$column] as $option)
                                             <a href="{{ $option['url'] }}">{!! $option['element'] !!}</a>
                                         @endforeach
                                     </td>
                                 @else
                                     <td class="border-dashed border-t border-gray-200 {{ $props['class'] ?? '' }}">
-                                        <span class="text-gray-700 px-6 py-3 flex items-center">{!! $item->{$column} !!}</span>
+                                        <span class="text-gray-700 px-6 py-3 flex items-center">{!! $item->[$column] !!}</span>
                                     </td>
                                 @endif
                             @endforeach
