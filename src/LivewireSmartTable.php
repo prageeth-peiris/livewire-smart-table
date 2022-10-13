@@ -3,7 +3,8 @@
 namespace Tkaratug\LivewireSmartTable;
 
 use Illuminate\Contracts\View\Factory;
-use Illuminate\Database\Eloquent\Collection;
+//use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\View\View;
 use Livewire\Component;
@@ -71,7 +72,7 @@ class LivewireSmartTable extends Component
                 $found = false;
                 foreach ($this->columns as $column => $props) {
                     if ($props['type'] !== 'actions') {
-                        if (stripos($item->{$column}, $this->search) !== false) {
+                        if (stripos($item[$column], $this->search) !== false) {
                             $found = true;
                         }
                     }
