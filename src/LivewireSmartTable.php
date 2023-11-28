@@ -133,7 +133,8 @@ class LivewireSmartTable extends Component
                                     'element' => $action['element'],
                                     'url' => $this->makeUrl($action['url'], $item),
                                 ];
-                                $item->{$key} = $actions;
+                               // $item->{$key} = $actions;
+                                $item[$key] = $actions;
                             }
                             break;
                         default:
